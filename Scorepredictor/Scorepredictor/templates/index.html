@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Score Predictor</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .main-text {
+            background-color: gray;
+            width: 700px;
+            margin-bottom: 20px;
+            padding: 25px;
+            text-align: justify;
+            text-indent: 0cqmax;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        header h1 {
+            padding: 25px;
+            margin-bottom: 20px;
+            padding-bottom: 25px;
+            opacity: 1;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 0%;
+            color: white;
+            font-size: 20px;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+            color: white;
+        }
+
+
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 50%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            border-color: lightslategrey;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type="submit"] {
+            background-color: #04aa6d;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            border-color: lightslategrey;
+            cursor: pointer;
+            float: right;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        .container {
+            border-radius: 5px;
+            border-color: lightslategrey;
+            color: white;
+            padding: 20px;
+            font-size: 25px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .button {
+            background-color: grey; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 50px;
+            margin-left : 150px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+            
+        }
+
+        .button1 {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        
+        <h1>Learning Management System</h1>
+    </header>
+    <div class="container">
+        <h1>Student Score Predictor</h1>
+        <form method="POST">
+            <div class="row">
+                <div class="col-25">
+                    <label for="attendance">Attendance (%)</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" name="attendance" id="attendance" required>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="assignment1_avg">Assignment 1 Average</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" name="assignment1_avg" id="assignment1_avg" required>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="assignment2_avg">Assignment 2 Average</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" name="assignment2_avg" id="assignment2_avg" required>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <button class="button button1" type="submit">Predict Score</button>
+            </div>
+
+        </form>
+
+        {% if prediction is not none %}
+        <div class="result">
+            Predicted Final Score: <strong>{{ prediction | round(2) }}</strong>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

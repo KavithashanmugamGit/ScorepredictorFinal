@@ -1,0 +1,137 @@
+
+
+body {
+    background-color: black;
+}
+
+div.mycontainer {
+    width: 100%;
+    overflow: auto;
+}
+
+nav {
+    border: solid;
+    border-color: white;
+    border-top: white;
+    border-left: none;
+    border-right: none;
+}
+
+.main-text {
+    background-color: gray;
+    width: 700px;
+    margin-bottom: 20px;
+    padding: 25px;
+    text-align: justify;
+    
+    text-indent: 0cqmax;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header h1 {
+    padding: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    opacity: 1;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.event_frame {
+    width: 245px;
+    height: 192px;
+    object-fit: cover;
+}
+
+.contactus {
+    text-align: right;
+    padding: 200px;
+    color: bisque;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 0%;
+    color: white;
+    font-size: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    color: white;
+}
+
+
+
+input[type="text"],
+select,
+textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+.container {
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
