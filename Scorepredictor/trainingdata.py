@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import pickle
 
+
 data = {
     
     'attendance':      [90, 75, 85, 60, 95, 50, 80, 40, 100, 70],
@@ -19,3 +20,4 @@ model.fit(inValues, outValues)
 
 with open('model1.pkl', 'wb') as f:
     pickle.dump(model, f)
+

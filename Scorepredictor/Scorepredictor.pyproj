@@ -28,6 +28,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="graph.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="Scorepredictor\__init__.py" />
     <Compile Include="Scorepredictor\views.py" />
@@ -50,6 +53,7 @@
     <Content Include="Scorepredictor\static\content\bootstrap.css" />
     <Content Include="Scorepredictor\static\content\bootstrap.min.css" />
     <Content Include="Scorepredictor\static\content\site.css" />
+    <Content Include="Scorepredictor\static\download.jfif" />
     <Content Include="Scorepredictor\static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scorepredictor\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Scorepredictor\static\fonts\glyphicons-halflings-regular.ttf" />
